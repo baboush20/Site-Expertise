@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon site professionnel</title>
+  <meta name="description" content="Site vitrine professionnel — présentation, services, projets et contact." />
+  <meta property="og:title" content="Mon site professionnel" />
+  <meta property="og:description" content="Site vitrine — présentation, services, réalisations et contact." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Logo" class="logo">
+        <span class="brand-name">Votre Nom</span>
+      </div>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#a-propos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Me contacter
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Accélérez vos projets avec un accompagnement professionnel</h1>
+          <p>
+            Conseil, études et suivi-évaluation dans les chaînes de valeur agricoles.
+            J'aide les organisations à passer de l'idée aux résultats mesurables.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#services">Découvrir mes services</a>
+            <a class="btn ghost" href="#projets">Voir mes projets</a>
+          </div>
+        </div>
+        <div class="hero-card" role="img" aria-label="Illustration">
+          <div class="kpi">
+            <div class="kpi-value">5+ ans</div>
+            <div class="kpi-label">d'expérience</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-value">3 filières</div>
+            <div class="kpi-label">riz, karité, mangue</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-propos" class="section">
+      <div class="container">
+        <h2>À propos</h2>
+        <p>
+          Ingénieur agroéconomiste, spécialisé en suivi-évaluation, structuration des OPA
+          et amélioration des performances des filières. J'interviens en Côte d'Ivoire et en Afrique de l'Ouest.
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Études & diagnostics</h3>
+            <p>Analyses de filières, études de marché et diagnostics export orientés résultats.</p>
+          </article>
+          <article class="card">
+            <h3>Suivi-évaluation (MEAL)</h3>
+            <p>Cadres de résultats, tableaux de bord Power BI, automatisation des flux de données.</p>
+          </article>
+          <article class="card">
+            <h3>Formation & coaching</h3>
+            <p>Modules pratiques pour OPA et PME : gouvernance, finance, mise en marché.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="container">
+        <h2>Projets récents</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Structuration de marchés</h3>
+            <p>Ateliers régionaux, mise en relation OPA–acheteurs, mécanismes de suivi.</p>
+          </article>
+          <article class="card">
+            <h3>Tableaux de bord</h3>
+            <p>Intégration Kobo ↔ Power BI avec alertes e-mail pour équipes projet.</p>
+          </article>
+          <article class="card">
+            <h3>Étude de faisabilité</h3>
+            <p>Boutiques paysannes agroécologiques — analyse de marché et business model.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Besoin d’échanger sur votre besoin ? Utilisez ce formulaire.</p>
+        <form id="contact-form">
+          <div class="form-row">
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin…" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Envoyer</button>
+            <a class="btn ghost" href="https://wa.me/225000000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <p class="form-note">Ce formulaire envoie un email via votre client de messagerie.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Votre Nom — Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
